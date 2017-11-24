@@ -1,0 +1,11 @@
+@import 'variables';
+
+.hover-highlight {
+  animation: highlight 1s ease-out;
+  color: $accent;
+}
+
+@keyframes highlight {
+  from {color: $secondary}
+  to {color: $accent}
+}
