@@ -1,0 +1,47 @@
+<div class="container form-container">
+  <div class="heading">
+    <span class="outer-span">
+      say
+      <span class="accent">hello</span>
+    </span>
+  </div>
+
+  <form #messageForm="ngForm">
+    <div class="form-group">
+      <input type="text"
+             class="form-control"
+             [(ngModel)]="model.name"
+             name="name"
+             placeholder="Name">
+
+      <input type="text"
+             class="form-control"
+             [(ngModel)]="model.email"
+             name="email"
+             placeholder="Email">
+
+      <textarea type="text"
+                class="form-control"
+                [(ngModel)]="model.message"
+                name="message"
+                placeholder="Message">
+      </textarea>
+
+      <div class="submit">
+        <input class="btn submit-button"
+               type="submit"
+               [value]="sendText"
+               (click)="onSubmit()">
+        <h5 [ngClass]="{'submitted': submitted}"
+            class="thanks">
+          Thanks!
+        </h5>
+        <h5 class="submission-error"
+            [ngClass]="{'has-error': submissionError}">
+          Something's wrong...
+        </h5>
+      </div>
+    </div>
+  </form>
+
+</div>

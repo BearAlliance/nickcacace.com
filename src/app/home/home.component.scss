@@ -10,10 +10,6 @@
   }
 }
 
-.hello {
-  border-right: 1px solid $primary;
-}
-
 .subtitle {
   text-align: center;
   padding: 10px;
@@ -21,4 +17,11 @@
 
 .accent {
   color: $accent;
+}
+
+@media (min-width: $screen-sm) {
+  .hello {
+    border-right: 1px solid $secondary-light;
+    text-align: end;
+  }
 }

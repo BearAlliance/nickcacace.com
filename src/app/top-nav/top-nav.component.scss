@@ -1,13 +1,13 @@
 @import '../variables';
-@import '../mixins';
 
 .nav-link {
   text-decoration: none;
   color: $secondary;
   font-family: $font-family-sans-serif;
+  transition: $transition-slow;
 
   &:hover {
-   @extend .hover-highlight;
+   color: $accent
   }
 }
 

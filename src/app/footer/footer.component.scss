@@ -1,5 +1,4 @@
 @import "../variables";
-@import '../mixins';
 
 .copyright {
   text-align: center;
@@ -10,9 +9,10 @@
 
 .links {
   text-align: center;
+  transition: $transition-slow;
 
   a:hover {
-    @extend .hover-highlight;
+    color: $accent;
   }
 }
 

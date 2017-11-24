@@ -8,4 +8,15 @@ $accent: #de541e;
 // Fonts
 $font-family-base: "Brandon Grotesque";
 $font-family-monospace: "Courier new";
-$font-family-sans-serif: "Helvetica";
+$font-family-sans-serif: "Futura";
+
+// Transitions
+$transition-slow: all .6s ease-out;
+$transition-fast: all .4s ease-out;
+
+// Breakpoints (bootstrap default)
+$screen-xs: 0;
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
