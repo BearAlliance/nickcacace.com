@@ -6,7 +6,7 @@
 
   img {
     border-radius: 10px;
-    max-height:300px;
+    max-height: 300px;
   }
 }
 
@@ -17,9 +17,20 @@
 
 .accent {
   color: $accent;
+  font-style: italic;
 }
 
-@media (min-width: $screen-sm) {
+a {
+  text-decoration: none;
+  color: $primary;
+  transition: $transition-fast;
+
+  &:hover {
+    color: $accent;
+  }
+}
+
+@media (min-width: $screen-md) {
   .hello {
     border-right: 1px solid $secondary-light;
     text-align: end;

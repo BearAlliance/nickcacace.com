@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { IProject } from '../projects/projects.component';
+import { IProject } from '../projects/projects.constant';
 
 @Component({
   selector: 'app-project',
@@ -14,6 +14,7 @@ export class ProjectComponent {
   constructor() { }
 
   onClicked() {
+    this.selected = !this.selected;
     this.selectClick.emit();
   }
 
