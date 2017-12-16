@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { ContactFormModel } from './contact-form-model';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact-form',
@@ -9,59 +7,22 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class ContactFormComponent {
 
-  model = new ContactFormModel();
-  submitted = false;
-  submissionError = false;
-  sendText = 'send';
+  hasValidEmail = true;
 
-  constructor(private http: HttpClient) {
+  constructor() {
   }
 
-  onSubmit() {
-    const url = 'https://script.google.com/macros/s/AKfycbxgJZ_mu5d7JebVu_ZFfhKHK0i5LLDCH7cV9srXwZ8qxghxnFQ/exec';
-    const formData = this.getFormData();
-    const options = {
-      headers: this.getHeaders()
-    };
-
-    this.http.post(url, formData, options)
-      .subscribe(
-        this.onSubmitSuccess,
-        this.onSubmitError
-      );
+  onEmailChange(event: any) {
+    const email = event.target.value;
+    this.hasValidEmail = this.isValidEmail(email);
   }
 
-  getHeaders() {
-    const headers = new HttpHeaders();
-    headers.set('Content-Type', 'application/x-www-form-urlencoded');
-    headers.set('Allow', 'application/json');
-    return headers;
+  isValidEmail(email: string) {
+    const emailRegex =
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+
+    return emailRegex.test(email);
   }
 
-  getFormData() {
-    const body = new URLSearchParams();
-    Object.keys(this.model)
-      .forEach(key => {
-        console.log(key);
-        body.set(key, this.model[key]);
-      });
-    body.set('formGoogleSheetName', 'responses');
-    console.log(body.toString());
-    return body.toString();
-  }
-
-  onSubmitSuccess() {
-    this.submitted = true;
-    setTimeout(() => {
-      this.submitted = false;
-    }, 2000);
-  }
-
-  onSubmitError(err) {
-    this.submissionError = true;
-    setTimeout(() => {
-      // this.submissionError = false;
-    }, 2000);
-    console.log('error', err);
-  }
 }

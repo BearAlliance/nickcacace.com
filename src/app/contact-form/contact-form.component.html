@@ -6,23 +6,25 @@
     </span>
   </div>
 
-  <form #messageForm="ngForm">
+  <form #form
+        action="https://formspree.io/nickcacace@gmail.com"
+        target="_self"
+        method="POST">
     <div class="form-group">
       <input type="text"
              class="form-control"
-             [(ngModel)]="model.name"
              name="name"
              placeholder="Name">
 
       <input type="text"
              class="form-control"
-             [(ngModel)]="model.email"
+             [ngClass]="{'invalid': !hasValidEmail}"
+             (change)="onEmailChange($event)"
              name="email"
              placeholder="Email">
 
       <textarea type="text"
                 class="form-control"
-                [(ngModel)]="model.message"
                 name="message"
                 placeholder="Message">
       </textarea>
@@ -30,16 +32,9 @@
       <div class="submit">
         <input class="btn submit-button"
                type="submit"
-               [value]="sendText"
-               (click)="onSubmit()">
-        <h5 [ngClass]="{'submitted': submitted}"
-            class="thanks">
-          Thanks!
-        </h5>
-        <h5 class="submission-error"
-            [ngClass]="{'has-error': submissionError}">
-          Something's wrong...
-        </h5>
+               value="SEND"
+               [disabled]="!hasValidEmail"
+               (click)="form.submit()">
       </div>
     </div>
   </form>

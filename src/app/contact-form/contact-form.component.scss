@@ -31,6 +31,11 @@
   background-color: inherit;
   border: none;
   border-bottom: 1px solid $secondary-light;
+  border-radius: 0;
+
+  &.invalid {
+    border-bottom: 1px solid $primary-error;
+  }
 }
 
 textarea.form-control {
@@ -42,29 +47,6 @@ textarea.form-control {
   position: relative;
   margin: 50px 0;
   padding-top: 40px;
-
-  .thanks {
-    position: absolute;
-    bottom: 35px;
-    right: 65px;
-    opacity: 0;
-    transition: $transition-fast;
-  }
-  .thanks.submitted {
-    opacity: 1;
-  }
-
-  .submission-error {
-    position: absolute;
-    bottom: 38px;
-    left: 0;
-    opacity: 0;
-    transition: $transition-fast;
-  }
-
-  .submission-error.has-error {
-    opacity: 1;
-  }
 
   .submit-button {
     font-family: $font-family-sans-serif;
@@ -84,9 +66,14 @@ textarea.form-control {
     cursor: pointer;
     margin: -40px 0 0 -40px;
 
-
     &:hover {
       background-color: $accent;
+    }
+
+    &:disabled {
+      background-color: $secondary;
+      opacity: 1;
+      cursor: inherit;
     }
 
   }
@@ -95,60 +82,3 @@ textarea.form-control {
 .accent {
   color: $accent;
 }
-
-/////////////////
-//
-//$color--green: #7ac142;
-//$curve: cubic-bezier(0.650, 0.000, 0.450, 1.000);
-//
-//.checkmark__circle {
-//  stroke-dasharray: 166;
-//  stroke-dashoffset: 166;
-//  stroke-width: 2;
-//  stroke-miterlimit: 10;
-//  stroke: $color--green;
-//  fill: none;
-//  animation: stroke .6s $curve forwards;
-//}
-//
-//.checkmark {
-//  background-color: $background;
-//  width: 56px;
-//  height: 56px;
-//  border-radius: 50%;
-//  display: block;
-//  stroke-width: 2;
-//  stroke: #fff;
-//  stroke-miterlimit: 10;
-//  margin: 10% auto;
-//  box-shadow: inset 0px 0px 0px $color--green;
-//  animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
-//}
-//
-//.checkmark__check {
-//  transform-origin: 50% 50%;
-//  stroke-dasharray: 48;
-//  stroke-dashoffset: 48;
-//  animation: stroke .3s $curve .8s forwards;
-//}
-//
-//@keyframes stroke {
-//  100% {
-//    stroke-dashoffset: 0;
-//  }
-//}
-//
-//@keyframes scale {
-//  0%, 100% {
-//    transform: none;
-//  }
-//  50% {
-//    transform: scale3d(1.1, 1.1, 1);
-//  }
-//}
-//
-//@keyframes fill {
-//  100% {
-//    box-shadow: inset 0 0 0 30px $color--green;
-//  }
-//}
