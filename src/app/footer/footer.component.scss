@@ -9,14 +9,14 @@
 
 .links {
   text-align: center;
-  transition: $transition-slow;
 
-  a:hover {
-    color: $accent;
+  a {
+    text-decoration: none;
+    color: $secondary;
+    transition: $transition-slow;
+
+    &:hover {
+      color: $accent;
+    }
   }
-}
-
-a {
-  text-decoration: none;
-  color: $secondary;
 }
