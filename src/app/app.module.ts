@@ -14,6 +14,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ProjectComponent } from './project/project.component';
 
 const appRoutes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -37,7 +38,8 @@ const appRoutes: Routes = [
     FooterComponent,
     PageNotFoundComponent,
     ContactComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,

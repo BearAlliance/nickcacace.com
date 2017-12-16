@@ -1,0 +1,43 @@
+@import "../variables";
+
+.project {
+  .project-title {
+    cursor: pointer;
+    transition: $transition-fast;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  .project-details {
+    transition: $transition-fast;
+    height: 0;
+    color: $secondary;
+    display: none;
+
+    &.selected {
+      height: 100%;
+      display: block;
+    }
+
+    .technologies-heading {
+      text-decoration: underline;
+    }
+
+    .project-links {
+      text-align: center;
+
+      a {
+        text-decoration: none;
+        color: $secondary;
+        transition: $transition-fast;
+
+        &:hover {
+          color: $accent;
+        }
+      }
+    }
+
+  }
+}

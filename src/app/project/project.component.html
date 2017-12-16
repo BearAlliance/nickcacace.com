@@ -1,0 +1,38 @@
+<div class="project">
+  <h4 class="project-title"
+      (click)="onClicked($event)">
+    {{ project.title }}
+  </h4>
+  <p>{{ project.summary }}</p>
+
+  <div class="project-details"
+       [ngClass]="{'selected': selected}">
+    <p>{{ project.description }}</p>
+
+    <!-- Technologies -->
+    <div *ngIf="project.technologies">
+          <span class="technologies-heading">
+            Technologies used:
+          </span>
+      <ul>
+        <li *ngFor="let tech of project.technologies">
+          {{ tech }}
+        </li>
+      </ul>
+    </div>
+
+    <!-- External Links -->
+    <div class="project-links">
+          <span *ngFor="let link of project.links; let i = index">
+            <a [href]="link.href"
+               target="_blank">
+              {{ link.title }}
+              <span class="fa fa-external-link"></span>
+            </a>
+            <span *ngIf="i !== project.links.length -1">
+             |
+            </span>
+          </span>
+    </div>
+  </div>
+</div>

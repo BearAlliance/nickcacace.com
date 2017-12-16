@@ -6,16 +6,6 @@
   font-style: italic;
 }
 
-.project {
-  .project-title {
-    cursor: pointer;
-    transition: $transition-fast;
-
-    &:hover {
-      color: $accent;
-    }
-  }
-}
 
 @media (min-width: $screen-md) {
   .software-col {

@@ -3,27 +3,23 @@
 <div class="row">
   <div class="col-xs-12 col-md 6 software-col">
     <h2 class="heading">
-      Software
+      Web
     </h2>
-
-    <div class="project"
-         *ngFor="let project of projects.software">
-      <h4 class="project-title">{{ project.title }}</h4>
-      <p>{{ project.summary }}</p>
-    </div>
-
+    <app-project *ngFor="let project of projects.software; let i=index"
+                 [project]="project"
+                 [selected]="isSelected('web', i)"
+                 (selectClick)="setSelected('web', i)">
+    </app-project>
   </div>
 
   <div class="col-xs-12 col-md 6">
     <h2 class="heading">
       Wood
     </h2>
-
-    <div class="project"
-         *ngFor="let project of projects.wood">
-      <h4 class="project-title">{{ project.title }}</h4>
-      <p>{{ project.summary }}</p>
-    </div>
-
+    <app-project *ngFor="let project of projects.wood; let i=index"
+                 [project]="project"
+                 [selected]="isSelected('wood', i)"
+                 (selectClick)="setSelected('wood', i)">
+    </app-project>
   </div>
 </div>
