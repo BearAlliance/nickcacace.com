@@ -15,7 +15,7 @@ deploy:
   acl: public_read
   access_key_id: $AWS_ACCESS_KEY_ID
   secret_access_key: $AWS_SECRET_ACCESS_KEY
-  bucket: "nickcacace.com"
+  bucket: "www.nickcacace.com"
   skip_cleanup: true
   local_dir: dist
   on:
