@@ -6,11 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./contact-form.component.scss']
 })
 export class ContactFormComponent {
-
   hasValidEmail = true;
 
-  constructor() {
-  }
+  constructor() {}
 
   onEmailChange(event: any) {
     const email = event.target.value;
@@ -18,11 +16,8 @@ export class ContactFormComponent {
   }
 
   isValidEmail(email: string) {
-    const emailRegex =
-      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
+    const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     return emailRegex.test(email);
   }
-
 }

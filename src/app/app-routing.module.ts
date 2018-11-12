@@ -20,7 +20,7 @@ const appRoutes: Routes = [
     redirectTo: '/home',
     pathMatch: 'full'
   },
-  {path: '**', component: PageNotFoundComponent}
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
@@ -29,9 +29,6 @@ const appRoutes: Routes = [
       appRoutes
     )
   ],
-  exports: [
-    RouterModule
-  ]
+  exports: [RouterModule]
 })
-export class AppRoutingModule {
-}
+export class AppRoutingModule {}

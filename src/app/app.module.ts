@@ -17,14 +17,8 @@ import { AppRoutingModule } from './app-routing.module';
     FooterComponent,
     PageNotFoundComponent
   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpClientModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule {}
