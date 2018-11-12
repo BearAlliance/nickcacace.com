@@ -12,7 +12,6 @@ interface IProjects {
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent {
-
   projects: IProjects = {
     wood: ProjectsConstant.wood,
     software: ProjectsConstant.software
@@ -23,8 +22,7 @@ export class ProjectsComponent {
     wood: undefined
   };
 
-  constructor() {
-  }
+  constructor() {}
 
   setSelected(column: string, index: number) {
     if (this.isSelected(column, index)) {
@@ -37,5 +35,4 @@ export class ProjectsComponent {
   isSelected(column: string, index: number) {
     return this.selected[column] === index;
   }
-
 }

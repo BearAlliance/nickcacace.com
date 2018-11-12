@@ -7,9 +7,10 @@ cache:
 install:
   - npm install
 
-script: echo skipping tests
+script: "npm test"
 
 before_deploy: "ng build --prod"
+
 deploy:
   provider: s3
   acl: public_read
