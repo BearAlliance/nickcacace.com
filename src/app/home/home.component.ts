@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IProject, ProjectsConstant } from '../projects/projects.constant';
+import { IProject, ProjectsConstant } from '../shared/projects.constant';
 
 @Component({
   selector: 'app-home',
