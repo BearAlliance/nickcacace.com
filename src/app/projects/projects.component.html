@@ -1,8 +1,8 @@
-<h1 class="title">Projects</h1>
+<h1 class="title is-size-2">Projects</h1>
 
-<div class="row">
-  <div class="col-xs-12 col-md 6 software-col">
-    <h2 class="heading">
+<div class="columns">
+  <div class="column software-col">
+    <h2 class="heading is-size-3">
       Web
     </h2>
     <app-project *ngFor="let project of projects.software; let i=index"
@@ -12,8 +12,8 @@
     </app-project>
   </div>
 
-  <div class="col-xs-12 col-md 6">
-    <h2 class="heading">
+  <div class="column">
+    <h2 class="heading is-size-3">
       Wood
     </h2>
     <app-project *ngFor="let project of projects.wood; let i=index"

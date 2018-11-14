@@ -1,6 +1,7 @@
 <div class="container form-container">
   <div class="heading">
-    <span class="outer-span">
+    <div class="line-break"></div>
+    <span class="outer-span is-size-6">
       say
       <span class="accent">hello</span>
     </span>
@@ -11,25 +12,32 @@
         target="_self"
         method="POST">
     <div class="form-group">
-      <input type="text"
-             class="form-control"
-             name="name"
-             placeholder="Name">
 
-      <input type="text"
-             class="form-control"
-             [ngClass]="{'invalid': !hasValidEmail}"
-             (change)="onEmailChange($event)"
-             name="email"
-             placeholder="Email">
+      <div class="field">
+          <input type="text"
+                 class="form-control text"
+                 name="name"
+                 placeholder="Name">
+      </div>
 
-      <textarea type="text"
-                class="form-control"
-                name="message"
-                placeholder="Message"></textarea>
+      <div class="field">
+          <input type="text"
+                 class="form-control text"
+                 [ngClass]="{'invalid': !hasValidEmail}"
+                 (change)="onEmailChange($event)"
+                 name="email"
+                 placeholder="Email">
+      </div>
+
+        <div class="control">
+          <textarea type="text"
+                    class="form-control textarea"
+                    name="message"
+                    placeholder="Message"></textarea>
+      </div>
 
       <div class="submit">
-        <input class="btn submit-button"
+        <input class="submit-button"
                type="submit"
                value="SEND"
                [disabled]="!hasValidEmail"

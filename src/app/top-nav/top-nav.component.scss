@@ -1,16 +1,18 @@
 @import '../variables';
 
-.nav-link {
+.navbar-item {
   text-decoration: none;
   color: $secondary;
   font-family: $font-family-sans-serif;
   transition: $transition-slow;
 
   &:hover {
-   color: $accent
+   color: $accent;
+    background-color: $background;
   }
 }
 
-.nav {
+.navbar {
   padding: 10px;
+  background-color: $background;
 }

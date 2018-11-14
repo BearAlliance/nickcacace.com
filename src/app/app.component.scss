@@ -1,7 +1,10 @@
 @import './variables';
 
-body {
+html {
   background-color: $background;
+}
+
+body {
   color: $primary;
   font-family: $font-family-base;
 }
@@ -11,6 +14,8 @@ body {
   text-align: center;
   border-bottom: 1px solid $secondary-light;
   padding: 15px;
+  font-weight: $font-weight-light;
+  color: $secondary;
 }
 
 h1, h2, h3, h4, h5 {

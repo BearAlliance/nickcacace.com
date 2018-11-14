@@ -59,7 +59,7 @@ export class ProjectsConstant {
       technologies: [
         'Angular',
         'Travis CI',
-        'Bootstrap',
+        'Bulma',
         'Amazon AWS',
         'formspree.io'
       ],
