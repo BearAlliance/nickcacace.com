@@ -34,5 +34,22 @@
             </span>
           </span>
     </div>
+
+    <!-- Images -->
+    <div class="project-images level is-mobile is-centered">
+
+      <div *ngFor="let image of project.images"
+           class="level-item">
+        <figure class="image is-128x128"
+                (click)="displayImageModal(image)">
+          <img src="{{image.thumb}}">
+        </figure>
+      </div>
+
+      <app-image-modal [src]="displayedImageSrc"
+                       (close)="clearDisplayedImage()">
+      </app-image-modal>
+    </div>
+
   </div>
 </div>
