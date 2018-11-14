@@ -13,13 +13,14 @@
       <p>{{ project.description }}</p>
 
       <!-- Technologies -->
-      <div *ngIf="project.technologies">
+      <div *ngIf="project.technologies"
+           class="technologies">
           <span class="technologies-heading">
             Technologies used:
           </span>
         <ul>
           <li *ngFor="let tech of project.technologies">
-            {{ tech }}
+            - {{ tech }}
           </li>
         </ul>
       </div>
