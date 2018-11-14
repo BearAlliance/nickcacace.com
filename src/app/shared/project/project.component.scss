@@ -42,6 +42,7 @@
         text-decoration: none;
         color: $secondary;
         transition: $transition-fast;
+        padding-right: 30px;
 
         &:hover {
           color: $accent;

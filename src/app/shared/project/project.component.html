@@ -21,20 +21,6 @@
       </ul>
     </div>
 
-    <!-- External Links -->
-    <div class="project-links">
-          <span *ngFor="let link of project.links; let i = index">
-            <a [href]="link.href"
-               target="_blank">
-              {{ link.title }}
-              <span class="fa fa-external-link"></span>
-            </a>
-            <span *ngIf="i !== project.links.length -1">
-             |
-            </span>
-          </span>
-    </div>
-
     <!-- Images -->
     <div class="project-images level is-mobile is-centered">
 
@@ -49,6 +35,17 @@
       <app-image-modal [src]="displayedImageSrc"
                        (close)="clearDisplayedImage()">
       </app-image-modal>
+    </div>
+
+    <!-- External Links -->
+    <div class="project-links">
+          <span *ngFor="let link of project.links; let i = index">
+            <a [href]="link.href"
+               target="_blank">
+              {{ link.title }}
+              <span class="fa fa-external-link"></span>
+            </a>
+          </span>
     </div>
 
   </div>
