@@ -7,7 +7,7 @@
   transition: $transition-slow;
 
   &:hover {
-   color: $accent;
+    color: $accent;
     background-color: inherit;
   }
 }
@@ -17,8 +17,16 @@
   background-color: $background;
 
   .navbar-menu {
+    transition: all $fast;
+    max-height: 0;
     background-color: inherit;
-    //position: fixed;
-    //width: 100%;
+    box-shadow: none;
+    display: block;
+    overflow: hidden;
+    padding: 0;
+
+    &.is-active {
+      max-height: 400px;
+    }
   }
 }
