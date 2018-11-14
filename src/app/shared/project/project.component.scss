@@ -12,14 +12,12 @@
 
   .project-details {
     transition: $transition-fast;
-    height: 0;
+    max-height: 0;
     color: $secondary;
-    display: none;
-    margin-bottom: 25px;
+    overflow: hidden;
 
     &.selected {
-      height: 100%;
-      display: block;
+      max-height: 500px;
     }
 
     .technologies-heading {
@@ -50,5 +48,15 @@
       }
     }
 
+  }
+}
+
+@keyframes expand {
+  from {
+    max-height: 0;
+  }
+
+  to {
+    max-height: 500px;
   }
 }
