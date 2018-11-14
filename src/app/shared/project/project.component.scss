@@ -26,6 +26,15 @@
       text-decoration: underline;
     }
 
+    .project-images {
+      margin-top: 20px;
+
+      figure {
+        overflow: hidden;
+        cursor: pointer;
+      }
+    }
+
     .project-links {
       text-align: center;
 
