@@ -8,11 +8,17 @@
 
   &:hover {
    color: $accent;
-    background-color: $background;
+    background-color: inherit;
   }
 }
 
 .navbar {
   padding: 10px;
   background-color: $background;
+
+  .navbar-menu {
+    background-color: inherit;
+    //position: fixed;
+    //width: 100%;
+  }
 }
