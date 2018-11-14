@@ -119,10 +119,33 @@ export class ProjectsConstant {
 
   static software: IProject[] = [
     {
+      title: 'Top Secret',
+      summary: 'For prying eyes only',
+      description: `You know how it is, they always make you sign an NDA for the fun stuff. All of my recent professional work is closed source and vital company IP, so I can't share it with you here, but you can go check out the fruits of my labor at ADP.com`,
+      technologies: [
+        'Angular',
+        'TypeScript',
+        'rxJs',
+        'AngularJS',
+        'Jenkins CI',
+        'Jasmine',
+        'Karma',
+        'ESLint',
+        'Node',
+        'MongoDB'
+      ],
+      links: [
+        {
+          title: 'ADP',
+          href: 'https://adp.com'
+        }
+      ]
+    },
+    {
       title: 'Ops Starter',
       summary:
         'A starter repository, meant to be forked for easy CI/CD project generation',
-      description: `I got tired of writing boilerplate code for Continuous integration/deployment, so I made this blank slate. It's just a basic express webserver with basic db CRUD operaions, a good starting point for most projects.`,
+      description: `I got tired of writing boilerplate code for Continuous integration/deployment, so I made this blank slate. It's just a basic express webserver with basic db CRUD operations, a good starting point for most projects.`,
       technologies: [
         'Node',
         'MongoDB',
@@ -174,7 +197,7 @@ export class ProjectsConstant {
         'Billboard site for a local bike shop built with only html + bootstrap.',
       technologies: ['HTML', 'Twitter Bootstrap', 'Amazon AWS'],
       description:
-        'The client wanted minimal upfront cost, and small hosting fees. Using AWS to serve the static site',
+        `The client wanted minimal upfront cost, and small hosting fees. I'm using an AWS s3 bucket to serve the static site in order to minimize cost`,
       links: [
         {
           title: 'Check it out',
