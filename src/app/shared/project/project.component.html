@@ -3,42 +3,45 @@
       (click)="onClicked()">
     {{ project.title }}
   </h4>
-  <p>{{ project.summary }}</p>
 
-  <div class="project-details"
-       [ngClass]="{'selected': selected}">
-    <p>{{ project.description }}</p>
+  <div class="column">
 
-    <!-- Technologies -->
-    <div *ngIf="project.technologies">
+    <div>{{ project.summary }}</div>
+
+    <div class="project-details"
+         [ngClass]="{'selected': selected}">
+      <p>{{ project.description }}</p>
+
+      <!-- Technologies -->
+      <div *ngIf="project.technologies">
           <span class="technologies-heading">
             Technologies used:
           </span>
-      <ul>
-        <li *ngFor="let tech of project.technologies">
-          {{ tech }}
-        </li>
-      </ul>
-    </div>
-
-    <!-- Images -->
-    <div class="project-images level is-mobile is-centered">
-
-      <div *ngFor="let image of project.images"
-           class="level-item">
-        <figure class="image is-128x128"
-                (click)="displayImageModal(image)">
-          <img src="{{image.thumb}}">
-        </figure>
+        <ul>
+          <li *ngFor="let tech of project.technologies">
+            {{ tech }}
+          </li>
+        </ul>
       </div>
 
-      <app-image-modal [src]="displayedImageSrc"
-                       (close)="clearDisplayedImage()">
-      </app-image-modal>
-    </div>
+      <!-- Images -->
+      <div class="project-images level is-mobile is-centered">
 
-    <!-- External Links -->
-    <div class="project-links">
+        <div *ngFor="let image of project.images"
+             class="level-item">
+          <figure class="image is-128x128"
+                  (click)="displayImageModal(image)">
+            <img src="{{image.thumb}}">
+          </figure>
+        </div>
+
+        <app-image-modal [src]="displayedImageSrc"
+                         (close)="clearDisplayedImage()">
+        </app-image-modal>
+      </div>
+
+      <!-- External Links -->
+      <div class="project-links">
           <span *ngFor="let link of project.links; let i = index">
             <a [href]="link.href"
                target="_blank">
@@ -46,6 +49,8 @@
               <span class="fa fa-external-link"></span>
             </a>
           </span>
+      </div>
+
     </div>
 
   </div>
