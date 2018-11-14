@@ -20,8 +20,12 @@
       max-height: 500px;
     }
 
-    .technologies-heading {
-      text-decoration: underline;
+    .technologies {
+      margin-top: 10px;
+
+      .technologies-heading {
+        text-decoration: underline;
+      }
     }
 
     .project-images {
