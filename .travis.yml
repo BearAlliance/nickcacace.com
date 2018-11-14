@@ -7,9 +7,9 @@ cache:
 install:
   - npm install
 
-script: "npm test"
-
-before_deploy: "ng build --prod"
+script:
+  - npm test
+  - npm run build:production
 
 deploy:
   provider: s3
