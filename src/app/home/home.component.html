@@ -1,34 +1,37 @@
 <h1 class="title is-size-2">Nick Cacace</h1>
 
-<div class="subtitle">
-  Woodworker |
-  <span class="accent">Software Engineer</span>
-  | Cyclist
-</div>
-
-<div class="headshot-container">
-  <img src="../../assets/headshot.jpg"
-       alt="Profile Picture"
-       class="img-fluid">
-</div>
-
-<div class="columns">
-
-  <div class="column hello">
-    <h2 class="is-size-3"><span class="accent">Hello</span> there!</h2>
-    <p>{{ landingText }}</p>
+<div class="">
+  <div class="subtitle">
+    Woodworker |
+    <span class="accent">Software Engineer</span>
+    | Cyclist
   </div>
 
-  <div class="column">
-    <h2 class="is-size-3">Recent <span class="accent">work</span></h2>
+  <div class="headshot-container">
+    <img src="../../assets/headshot.jpg"
+         alt="Profile Picture"
+         class="img-fluid">
+  </div>
 
-      <app-project *ngFor="let project of recentWork"
-                   [project]="project">
-      </app-project>
+  <div class="columns">
+    <div class="column is-half hello">
+      <h2 class="is-size-3"><span class="accent">Hello</span> there!</h2>
+      <div class="column">{{ landingText }}</div>
+    </div>
 
-    <a routerLink="/projects">
-      more...
-    </a>
+    <div class="column is-half">
+      <h2 class="is-size-3">Recent <span class="accent">work</span></h2>
+
+      <div class="column">
+        <app-project *ngFor="let project of recentWork"
+                     [project]="project">
+        </app-project>
+
+        <a routerLink="/projects">
+          more...
+        </a>
+      </div>
+    </div>
   </div>
 
 </div>

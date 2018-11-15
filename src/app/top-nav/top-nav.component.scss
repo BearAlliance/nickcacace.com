@@ -1,4 +1,5 @@
 @import '../variables';
+@import '~bulma/sass/utilities/initial-variables';
 
 .navbar-item {
   text-decoration: none;
@@ -17,16 +18,23 @@
   background-color: $background;
 
   .navbar-menu {
-    transition: all $fast;
-    max-height: 0;
     background-color: inherit;
-    box-shadow: none;
-    display: block;
-    overflow: hidden;
-    padding: 0;
+  }
+}
 
-    &.is-active {
-      max-height: 400px;
+@media (max-width: $desktop) {
+  .navbar {
+    .navbar-menu {
+      transition: all $fast;
+      max-height: 0;
+      display: block;
+      box-shadow: none;
+      overflow: hidden;
+      padding: 0;
+
+      &.is-active {
+        max-height: 400px;
+      }
     }
   }
 }
