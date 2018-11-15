@@ -196,8 +196,7 @@ export class ProjectsConstant {
       summary:
         'Billboard site for a local bike shop built with only html + bootstrap.',
       technologies: ['HTML', 'Twitter Bootstrap', 'Amazon AWS'],
-      description:
-        `The client wanted minimal upfront cost, and small hosting fees. I'm using an AWS s3 bucket to serve the static site in order to minimize cost`,
+      description: `The client wanted minimal upfront cost, and small hosting fees. I'm using an AWS s3 bucket to serve the static site in order to minimize cost`,
       links: [
         {
           title: 'Check it out',

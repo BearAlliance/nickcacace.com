@@ -1,4 +1,5 @@
 @import '../variables';
+@import '~bulma/sass/utilities/initial-variables';
 
 .headshot-container {
   text-align: center;
@@ -30,7 +31,7 @@ a {
   }
 }
 
-@media (min-width: $screen-md) {
+@media (min-width: $tablet) {
   .hello {
     border-right: 1px solid $secondary-light;
     text-align: end;
