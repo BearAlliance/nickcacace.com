@@ -5,15 +5,17 @@ import { NgModule } from '@angular/core';
 const appRoutes: Routes = [
   {
     path: 'home',
-    loadChildren: 'app/home/home.module#HomeModule'
+    loadChildren: () => import('app/home/home.module').then(m => m.HomeModule)
   },
   {
     path: 'projects',
-    loadChildren: 'app/projects/projects.module#ProjectsModule'
+    loadChildren: () =>
+      import('app/projects/projects.module').then(m => m.ProjectsModule)
   },
   {
     path: 'contact',
-    loadChildren: 'app/contact/contact.module#ContactModule'
+    loadChildren: () =>
+      import('app/contact/contact.module').then(m => m.ContactModule)
   },
   {
     path: '',
