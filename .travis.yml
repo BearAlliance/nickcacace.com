@@ -1,23 +1,20 @@
 language: node_js
 node_js:
-  - "8"
-cache:
-  npm: true
-
-install:
-  - npm install
+  - '12'
 
 script:
   - npm test
   - npm run build:production
 
-deploy:
-  provider: s3
-  acl: public_read
-  access_key_id: $AWS_ACCESS_KEY_ID
-  secret_access_key: $AWS_SECRET_ACCESS_KEY
-  bucket: "www.nickcacace.com"
-  skip_cleanup: true
-  local_dir: dist
-  on:
-    branch: master
+jobs:
+  include:
+    - stage: 'deploy to aws'
+      if: branch = master
+      deploy:
+        provider: s3
+        acl: public_read
+        access_key_id: $AWS_ACCESS_KEY_ID
+        secret_access_key: $AWS_SECRET_ACCESS_KEY
+        bucket: 'www.nickcacace.com'
+        skip_cleanup: true
+        local_dir: dist
