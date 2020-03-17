@@ -142,6 +142,22 @@ export class ProjectsConstant {
       ]
     },
     {
+      title: 'TRT Bicycles Website',
+      summary: 'Billboard site for a local bike shop',
+      technologies: ['React', 'Bulma', 'Heroku', 'Travis CI'],
+      description: `Recently re-built in react for better maintainability. The client wanted minimal upfront cost, and a modern look to represent their small business`,
+      links: [
+        {
+          title: 'Check it out',
+          href: 'https://trtbicycles.com'
+        },
+        {
+          title: 'Source',
+          href: 'https://github.com/BearAlliance/TRT'
+        }
+      ]
+    },
+    {
       title: 'Ops Starter',
       summary:
         'A starter repository, meant to be forked for easy CI/CD project generation',
@@ -188,23 +204,6 @@ export class ProjectsConstant {
         {
           title: 'Source',
           href: 'https://github.com/BearAlliance/lorm'
-        }
-      ]
-    },
-    {
-      title: 'TRT Bicycles Website',
-      summary:
-        'Billboard site for a local bike shop built with only html + bootstrap.',
-      technologies: ['HTML', 'Twitter Bootstrap', 'Amazon AWS'],
-      description: `The client wanted minimal upfront cost, and small hosting fees. I'm using an AWS s3 bucket to serve the static site in order to minimize cost`,
-      links: [
-        {
-          title: 'Check it out',
-          href: 'http://trtbicycles.com'
-        },
-        {
-          title: 'Source',
-          href: 'https://github.com/BearAlliance/TRT'
         }
       ]
     }
