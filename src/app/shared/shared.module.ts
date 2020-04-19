@@ -6,6 +6,6 @@ import { ImageModalComponent } from '../image-modal/image-modal.component';
 @NgModule({
   imports: [CommonModule],
   declarations: [ProjectComponent, ImageModalComponent],
-  exports: [ProjectComponent, ImageModalComponent]
+  exports: [ProjectComponent, ImageModalComponent],
 })
 export class SharedModule {}

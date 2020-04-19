@@ -4,7 +4,7 @@ import { IImage, IProject } from '../projects.constant';
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',
-  styleUrls: ['./project.component.scss']
+  styleUrls: ['./project.component.scss'],
 })
 export class ProjectComponent {
   @Input() project: IProject;

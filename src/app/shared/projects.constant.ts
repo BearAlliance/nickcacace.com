@@ -26,17 +26,17 @@ export class ProjectsConstant {
       images: [
         {
           src: 'assets/projects/table-1.jpg',
-          thumb: 'assets/projects/table-1-thumb.jpg'
+          thumb: 'assets/projects/table-1-thumb.jpg',
         },
         {
           src: 'assets/projects/table-2.jpg',
-          thumb: 'assets/projects/table-2-thumb.jpg'
+          thumb: 'assets/projects/table-2-thumb.jpg',
         },
         {
           src: 'assets/projects/table-3.jpg',
-          thumb: 'assets/projects/table-3-thumb.jpg'
-        }
-      ]
+          thumb: 'assets/projects/table-3-thumb.jpg',
+        },
+      ],
     },
     {
       title: 'Steamer trunk restoration',
@@ -46,17 +46,17 @@ export class ProjectsConstant {
       images: [
         {
           src: 'assets/projects/trunk-1.jpg',
-          thumb: 'assets/projects/trunk-1-thumb.jpg'
+          thumb: 'assets/projects/trunk-1-thumb.jpg',
         },
         {
           src: 'assets/projects/trunk-2.jpg',
-          thumb: 'assets/projects/trunk-2-thumb.jpg'
+          thumb: 'assets/projects/trunk-2-thumb.jpg',
         },
         {
           src: 'assets/projects/trunk-3.jpg',
-          thumb: 'assets/projects/trunk-3-thumb.jpg'
-        }
-      ]
+          thumb: 'assets/projects/trunk-3-thumb.jpg',
+        },
+      ],
     },
     {
       title: 'Drafting table',
@@ -65,17 +65,17 @@ export class ProjectsConstant {
       images: [
         {
           src: 'assets/projects/draft-table-1.jpg',
-          thumb: 'assets/projects/draft-table-1-thumb.jpg'
+          thumb: 'assets/projects/draft-table-1-thumb.jpg',
         },
         {
           src: 'assets/projects/draft-table-2.jpg',
-          thumb: 'assets/projects/draft-table-2-thumb.jpg'
+          thumb: 'assets/projects/draft-table-2-thumb.jpg',
         },
         {
           src: 'assets/projects/draft-table-3.jpg',
-          thumb: 'assets/projects/draft-table-3-thumb.jpg'
-        }
-      ]
+          thumb: 'assets/projects/draft-table-3-thumb.jpg',
+        },
+      ],
     },
     {
       title: 'Open wardrobe',
@@ -84,17 +84,17 @@ export class ProjectsConstant {
       images: [
         {
           src: 'assets/projects/wardrobe-1.jpg',
-          thumb: 'assets/projects/wardrobe-1-thumb.jpg'
+          thumb: 'assets/projects/wardrobe-1-thumb.jpg',
         },
         {
           src: 'assets/projects/wardrobe-2.jpg',
-          thumb: 'assets/projects/wardrobe-2-thumb.jpg'
+          thumb: 'assets/projects/wardrobe-2-thumb.jpg',
         },
         {
           src: 'assets/projects/wardrobe-3.jpg',
-          thumb: 'assets/projects/wardrobe-3-thumb.jpg'
-        }
-      ]
+          thumb: 'assets/projects/wardrobe-3-thumb.jpg',
+        },
+      ],
     },
     {
       title: 'Tiny desk',
@@ -103,18 +103,18 @@ export class ProjectsConstant {
       images: [
         {
           src: 'assets/projects/desk-1.jpg',
-          thumb: 'assets/projects/desk-1-thumb.jpg'
+          thumb: 'assets/projects/desk-1-thumb.jpg',
         },
         {
           src: 'assets/projects/desk-2.jpg',
-          thumb: 'assets/projects/desk-2-thumb.jpg'
+          thumb: 'assets/projects/desk-2-thumb.jpg',
         },
         {
           src: 'assets/projects/desk-3.jpg',
-          thumb: 'assets/projects/desk-3-thumb.jpg'
-        }
-      ]
-    }
+          thumb: 'assets/projects/desk-3-thumb.jpg',
+        },
+      ],
+    },
   ];
 
   static software: IProject[] = [
@@ -132,14 +132,14 @@ export class ProjectsConstant {
         'Karma',
         'ESLint',
         'Node',
-        'MongoDB'
+        'MongoDB',
       ],
       links: [
         {
           title: 'ADP',
-          href: 'https://adp.com'
-        }
-      ]
+          href: 'https://adp.com',
+        },
+      ],
     },
     {
       title: 'TRT Bicycles Website',
@@ -149,13 +149,13 @@ export class ProjectsConstant {
       links: [
         {
           title: 'Check it out',
-          href: 'https://trtbicycles.com'
+          href: 'https://trtbicycles.com',
         },
         {
           title: 'Source',
-          href: 'https://github.com/BearAlliance/TRT'
-        }
-      ]
+          href: 'https://github.com/BearAlliance/TRT',
+        },
+      ],
     },
     {
       title: 'Ops Starter',
@@ -168,14 +168,14 @@ export class ProjectsConstant {
         'Travis CI',
         'Chai',
         'Jasmine',
-        'Mocha'
+        'Mocha',
       ],
       links: [
         {
           title: 'Source',
-          href: 'https://github.com/BearAlliance/ops-starter'
-        }
-      ]
+          href: 'https://github.com/BearAlliance/ops-starter',
+        },
+      ],
     },
     {
       title: 'NickCacace.com',
@@ -186,14 +186,14 @@ export class ProjectsConstant {
         'Travis CI',
         'Bulma',
         'Amazon AWS',
-        'formspree.io'
+        'formspree.io',
       ],
       links: [
         {
           title: 'Source',
-          href: 'https://github.com/BearAlliance/nickcacace.com'
-        }
-      ]
+          href: 'https://github.com/BearAlliance/nickcacace.com',
+        },
+      ],
     },
     {
       title: 'L or M Train',
@@ -203,9 +203,9 @@ export class ProjectsConstant {
       links: [
         {
           title: 'Source',
-          href: 'https://github.com/BearAlliance/lorm'
-        }
-      ]
-    }
+          href: 'https://github.com/BearAlliance/lorm',
+        },
+      ],
+    },
   ];
 }

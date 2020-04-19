@@ -5,10 +5,12 @@
     <h2 class="heading is-size-3">
       Web
     </h2>
-    <app-project *ngFor="let project of projects.software; let i=index"
-                 [project]="project"
-                 [selected]="isSelected('web', i)"
-                 (selectClick)="setSelected('web', i)">
+    <app-project
+      *ngFor="let project of projects.software; let i = index"
+      [project]="project"
+      [selected]="isSelected('web', i)"
+      (selectClick)="setSelected('web', i)"
+    >
     </app-project>
   </div>
 
@@ -16,10 +18,12 @@
     <h2 class="heading is-size-3">
       Wood
     </h2>
-    <app-project *ngFor="let project of projects.wood; let i=index"
-                 [project]="project"
-                 [selected]="isSelected('wood', i)"
-                 (selectClick)="setSelected('wood', i)">
+    <app-project
+      *ngFor="let project of projects.wood; let i = index"
+      [project]="project"
+      [selected]="isSelected('wood', i)"
+      (selectClick)="setSelected('wood', i)"
+    >
     </app-project>
   </div>
 </div>

@@ -7,43 +7,51 @@
     </span>
   </div>
 
-  <form #form
-        action="https://formspree.io/nickcacace@gmail.com"
-        target="_self"
-        method="POST">
+  <form
+    #form
+    action="https://formspree.io/nickcacace@gmail.com"
+    target="_self"
+    method="POST"
+  >
     <div class="form-group">
-
       <div class="field">
-          <input type="text"
-                 class="form-control text"
-                 name="name"
-                 placeholder="Name">
+        <input
+          type="text"
+          class="form-control text"
+          name="name"
+          placeholder="Name"
+        />
       </div>
 
       <div class="field">
-          <input type="text"
-                 class="form-control text"
-                 [ngClass]="{'invalid': !hasValidEmail}"
-                 (change)="onEmailChange($event)"
-                 name="email"
-                 placeholder="Email">
+        <input
+          type="text"
+          class="form-control text"
+          [ngClass]="{ invalid: !hasValidEmail }"
+          (change)="onEmailChange($event)"
+          name="email"
+          placeholder="Email"
+        />
       </div>
 
-        <div class="control">
-          <textarea type="text"
-                    class="form-control textarea"
-                    name="message"
-                    placeholder="Message"></textarea>
+      <div class="control">
+        <textarea
+          type="text"
+          class="form-control textarea"
+          name="message"
+          placeholder="Message"
+        ></textarea>
       </div>
 
       <div class="submit">
-        <input class="submit-button"
-               type="submit"
-               value="SEND"
-               [disabled]="!hasValidEmail"
-               (click)="form.submit()">
+        <input
+          class="submit-button"
+          type="submit"
+          value="SEND"
+          [disabled]="!hasValidEmail"
+          (click)="form.submit()"
+        />
       </div>
     </div>
   </form>
-
 </div>

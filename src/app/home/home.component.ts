@@ -4,7 +4,7 @@ import { IProject, ProjectsConstant } from '../shared/projects.constant';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
   recentWork: IProject[];
@@ -13,7 +13,7 @@ export class HomeComponent {
   constructor() {
     this.recentWork = [
       ...ProjectsConstant.software.slice(0, 2),
-      ...ProjectsConstant.wood.slice(0, 1)
+      ...ProjectsConstant.wood.slice(0, 1),
     ];
   }
 }

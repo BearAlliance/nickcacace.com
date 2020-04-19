@@ -5,28 +5,29 @@ import { NgModule } from '@angular/core';
 const appRoutes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('app/home/home.module').then(m => m.HomeModule)
+    loadChildren: () =>
+      import('app/home/home.module').then((m) => m.HomeModule),
   },
   {
     path: 'projects',
     loadChildren: () =>
-      import('app/projects/projects.module').then(m => m.ProjectsModule)
+      import('app/projects/projects.module').then((m) => m.ProjectsModule),
   },
   {
     path: 'contact',
     loadChildren: () =>
-      import('app/contact/contact.module').then(m => m.ContactModule)
+      import('app/contact/contact.module').then((m) => m.ContactModule),
   },
   {
     path: '',
     redirectTo: '/home',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
-  { path: '**', component: PageNotFoundComponent }
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(appRoutes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}

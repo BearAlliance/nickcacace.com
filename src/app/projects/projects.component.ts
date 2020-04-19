@@ -9,17 +9,17 @@ interface IProjects {
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss']
+  styleUrls: ['./projects.component.scss'],
 })
 export class ProjectsComponent {
   projects: IProjects = {
     wood: ProjectsConstant.wood,
-    software: ProjectsConstant.software
+    software: ProjectsConstant.software,
   };
 
   selected: any = {
     web: undefined,
-    wood: undefined
+    wood: undefined,
   };
 
   constructor() {}

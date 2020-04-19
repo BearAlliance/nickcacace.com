@@ -4,13 +4,13 @@ import {
   Input,
   OnChanges,
   Output,
-  SimpleChanges
+  SimpleChanges,
 } from '@angular/core';
 
 @Component({
   selector: 'app-image-modal',
   templateUrl: './image-modal.component.html',
-  styleUrls: ['./image-modal.component.scss']
+  styleUrls: ['./image-modal.component.scss'],
 })
 export class ImageModalComponent implements OnChanges {
   @Input() src: string;

@@ -1,58 +1,48 @@
 <div class="project">
-  <h4 class="project-title is-size-4"
-      (click)="onClicked()">
+  <h4 class="project-title is-size-4" (click)="onClicked()">
     {{ project.title }}
   </h4>
 
   <div class="column">
-
     <div>{{ project.summary }}</div>
 
-    <div class="project-details"
-         [ngClass]="{'selected': selected}">
+    <div class="project-details" [ngClass]="{ selected: selected }">
       <p>{{ project.description }}</p>
 
       <!-- Technologies -->
-      <div *ngIf="project.technologies"
-           class="technologies">
-          <span class="technologies-heading">
-            Technologies used:
-          </span>
+      <div *ngIf="project.technologies" class="technologies">
+        <span class="technologies-heading">
+          Technologies used:
+        </span>
         <ul>
-          <li *ngFor="let tech of project.technologies">
-            - {{ tech }}
-          </li>
+          <li *ngFor="let tech of project.technologies">- {{ tech }}</li>
         </ul>
       </div>
 
       <!-- Images -->
       <div class="project-images level is-mobile is-centered">
-
-        <div *ngFor="let image of project.images"
-             class="level-item">
-          <figure class="image is-128x128"
-                  (click)="displayImageModal(image)">
-            <img src="{{image.thumb}}">
+        <div *ngFor="let image of project.images" class="level-item">
+          <figure class="image is-128x128" (click)="displayImageModal(image)">
+            <img src="{{ image.thumb }}" />
           </figure>
         </div>
 
-        <app-image-modal [src]="displayedImageSrc"
-                         (close)="clearDisplayedImage()">
+        <app-image-modal
+          [src]="displayedImageSrc"
+          (close)="clearDisplayedImage()"
+        >
         </app-image-modal>
       </div>
 
       <!-- External Links -->
       <div class="project-links">
-          <span *ngFor="let link of project.links; let i = index">
-            <a [href]="link.href"
-               target="_blank">
-              {{ link.title }}
-              <span class="fa fa-external-link"></span>
-            </a>
-          </span>
+        <span *ngFor="let link of project.links; let i = index">
+          <a [href]="link.href" target="_blank">
+            {{ link.title }}
+            <span class="fa fa-external-link"></span>
+          </a>
+        </span>
       </div>
-
     </div>
-
   </div>
 </div>

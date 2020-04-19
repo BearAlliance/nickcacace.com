@@ -7,19 +7,19 @@ $accent: #de541e;
 $primary-error: #8b0000;
 
 // Fonts
-$font-family-base: "Brandon Grotesque";
-$font-family-monospace: "Courier new";
-$font-family-sans-serif: "Futura";
+$font-family-base: 'Brandon Grotesque';
+$font-family-monospace: 'Courier new';
+$font-family-sans-serif: 'Futura';
 
 // Weights
 $font-weight-light: 500;
 
 // Transitions
-$transition-slow: all .6s ease-out;
-$transition-fast: all .4s ease-out;
+$transition-slow: all 0.6s ease-out;
+$transition-fast: all 0.4s ease-out;
 
-$fast: .4s;
-$slow: .6s;
+$fast: 0.4s;
+$slow: 0.6s;
 
 // Breakpoints (bootstrap default)
 $screen-xs: 0;

@@ -8,9 +8,11 @@
   </div>
 
   <div class="headshot-container">
-    <img src="../../assets/headshot.jpg"
-         alt="Profile Picture"
-         class="img-fluid">
+    <img
+      src="../../assets/headshot.jpg"
+      alt="Profile Picture"
+      class="img-fluid"
+    />
   </div>
 
   <div class="columns">
@@ -23,8 +25,7 @@
       <h2 class="is-size-3">Recent <span class="accent">work</span></h2>
 
       <div class="column">
-        <app-project *ngFor="let project of recentWork"
-                     [project]="project">
+        <app-project *ngFor="let project of recentWork" [project]="project">
         </app-project>
 
         <a routerLink="/projects">
@@ -33,5 +34,4 @@
       </div>
     </div>
   </div>
-
 </div>

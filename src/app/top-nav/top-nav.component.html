@@ -1,23 +1,22 @@
 <div class="navbar">
-
   <div class="navbar-brand">
-    <a role="button"
-       class="navbar-burger burger"
-       [ngClass]="{'is-active': isNavOpen}"
-       (click)="toggleNav()"
-       aria-label="menu"
-       aria-expanded="false"
-       data-target="navbarBasicExample">
+    <a
+      role="button"
+      class="navbar-burger burger"
+      [ngClass]="{ 'is-active': isNavOpen }"
+      (click)="toggleNav()"
+      aria-label="menu"
+      aria-expanded="false"
+      data-target="navbarBasicExample"
+    >
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
     </a>
   </div>
 
-  <div class="navbar-menu"
-       [ngClass]="{'is-active': isNavOpen}">
-    <div class="navbar-start"
-         (click)="closeNav()">
+  <div class="navbar-menu" [ngClass]="{ 'is-active': isNavOpen }">
+    <div class="navbar-start" (click)="closeNav()">
       <a class="navbar-item" routerLink="home">home</a>
       <a class="navbar-item" routerLink="projects">projects</a>
       <a class="navbar-item" routerLink="contact">contact</a>
