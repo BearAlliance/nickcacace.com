@@ -14,7 +14,7 @@ import {
 })
 export class ImageModalComponent implements OnChanges {
   @Input() src: string;
-  @Output() close: EventEmitter<void> = new EventEmitter<void>();
+  @Output() closed: EventEmitter<void> = new EventEmitter<void>();
 
   isActive: boolean;
 
@@ -26,6 +26,6 @@ export class ImageModalComponent implements OnChanges {
 
   closeModal() {
     this.isActive = false;
-    this.close.emit();
+    this.closed.emit();
   }
 }

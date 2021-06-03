@@ -5,12 +5,10 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './top-nav.component.html',
   styleUrls: ['./top-nav.component.scss'],
 })
-export class TopNavComponent implements OnInit {
+export class TopNavComponent {
   isNavOpen: boolean;
 
   constructor() {}
-
-  ngOnInit() {}
 
   toggleNav() {
     this.isNavOpen = !this.isNavOpen;

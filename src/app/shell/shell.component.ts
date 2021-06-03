@@ -5,8 +5,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './shell.component.html',
   styleUrls: ['./shell.component.scss'],
 })
-export class ShellComponent implements OnInit {
+export class ShellComponent {
   constructor() {}
-
-  ngOnInit() {}
 }
