@@ -11,9 +11,7 @@
 
       <!-- Technologies -->
       <div *ngIf="project.technologies" class="technologies">
-        <span class="technologies-heading">
-          Technologies:
-        </span>
+        <span class="technologies-heading"> Technologies: </span>
         <ul>
           <li *ngFor="let tech of project.technologies">- {{ tech }}</li>
         </ul>
