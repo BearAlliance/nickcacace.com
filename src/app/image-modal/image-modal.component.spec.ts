@@ -6,13 +6,11 @@ describe('ImageModalComponent', () => {
   let component: ImageModalComponent;
   let fixture: ComponentFixture<ImageModalComponent>;
 
-  beforeEach(
-    waitForAsync(() => {
-      TestBed.configureTestingModule({
-        declarations: [ImageModalComponent],
-      }).compileComponents();
-    })
-  );
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      declarations: [ImageModalComponent],
+    }).compileComponents();
+  }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ImageModalComponent);
