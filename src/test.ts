@@ -24,7 +24,7 @@ getTestBed().initTestEnvironment(
   platformBrowserDynamicTesting(),
   {
     teardown: { destroyAfterEach: false },
-  }
+  },
 );
 // Finally, start Karma to run the tests.
 __karma__.start();
