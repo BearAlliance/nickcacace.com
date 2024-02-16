@@ -13,7 +13,7 @@ jobs:
       - run: ls -al /opt/hostedtoolcache/
       - run: ls -al /opt/hostedtoolcache/node
       - run: ls -al /opt/hostedtoolcache/go
-      - run: ls -al /opt/hostedtoolcache/python
+      - run: ls -al /opt/hostedtoolcache/Python
       - run: ls -alR /opt/hostedtoolcache
       - uses: actions/setup-node@v3
         with:
