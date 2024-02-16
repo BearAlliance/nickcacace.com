@@ -10,14 +10,14 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: env
+      - run: ls -al /opt/hostedtoolcache/
       - run: ls -al /opt/hostedtoolcache/node
       - run: ls -al /opt/hostedtoolcache/go
-      - run: ls -al /opt/hostedtoolcache/ruby
       - run: ls -al /opt/hostedtoolcache/python
       - run: ls -alR /opt/hostedtoolcache
       - uses: actions/setup-node@v3
         with:
-          node-version-file: '.nvmrc'
+          node-version: '21.3.0'
           cache: 'npm'
       - name: Install Dependencies
         run: npm ci
