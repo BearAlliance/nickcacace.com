@@ -15,7 +15,7 @@ jobs:
       - run: ls -al /opt/hostedtoolcache/go
       - run: ls -al /opt/hostedtoolcache/Python
       - run: du -sh /opt/hostedtoolcache
-      - run: du -sh /opt/hostedtoolcache/CodeQl
+      - run: du -sh /opt/hostedtoolcache/CodeQL
       - run: du -sh /opt/hostedtoolcache/PyPy
       - run: du -sh /opt/hostedtoolcache/Python
       - run: du -sh /opt/hostedtoolcache/Ruby
