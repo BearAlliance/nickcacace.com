@@ -15,6 +15,7 @@ jobs:
       - run: ls -al /opt/hostedtoolcache/go
       - run: ls -al /opt/hostedtoolcache/Python
       - run: ls -alR /opt/hostedtoolcache
+      - run: du -sh /opt/hostedtoolcache
       - uses: actions/setup-node@v3
         with:
           node-version: '21.3.0'
