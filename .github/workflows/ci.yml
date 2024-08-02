@@ -1,15 +1,17 @@
 name: CI
 on:
   pull_request:
-    branches: main
+    branches:
+      - main
   push:
-    branches: main
+    branches:
+      - main
 jobs:
-  test-and-build:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
           cache: 'npm'
@@ -19,12 +21,23 @@ jobs:
         run: npm test
       - name: Build
         run: npm run build
-      - name: Deploy
+      - name: Upload Artifact
         if: ${{ github.ref_name == 'main' }}
-        uses: peaceiris/actions-gh-pages@v3
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          # Only push the latest commit to the gh-pages branch
-          # Reduces the size of the repository by not retaining history for generated files
-          force_orphan: true
+          path: ./dist
+
+  deploy:
+    needs: build
+    if: ${{ github.ref_name == 'main' }}
+    permissions:
+      pages: write # to deploy to Pages
+      id-token: write # to verify the deployment originates from an appropriate source
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
