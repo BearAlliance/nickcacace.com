@@ -1,5 +1,5 @@
-@import '../variables';
-@import '/node_modules/bulma/sass/utilities/initial-variables';
+@use '../variables';
+@use '/node_modules/bulma/sass/utilities/initial-variables';
 
 .headshot-container {
   text-align: center;
@@ -17,23 +17,23 @@
 }
 
 .accent {
-  color: $accent;
+  color: variables.$accent;
   font-style: italic;
 }
 
 a {
   text-decoration: none;
-  color: $primary;
-  transition: $transition-fast;
+  color: variables.$primary;
+  transition: variables.$transition-fast;
 
   &:hover {
-    color: $accent;
+    color: variables.$accent;
   }
 }
 
-@media (min-width: $tablet) {
+@media (min-width: initial-variables.$tablet) {
   .hello {
-    border-right: 1px solid $secondary-light;
+    border-right: 1px solid variables.$secondary-light;
     text-align: end;
   }
 }

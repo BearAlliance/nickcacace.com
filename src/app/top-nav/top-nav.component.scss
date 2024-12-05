@@ -1,31 +1,31 @@
-@import '../variables';
-@import '/node_modules/bulma/sass/utilities/initial-variables';
+@use '../variables';
+@use '/node_modules/bulma/sass/utilities/initial-variables';
 
 .navbar-item {
   text-decoration: none;
-  color: $secondary;
-  font-family: $font-family-sans-serif;
-  transition: $transition-slow;
+  color: variables.$secondary;
+  font-family: variables.$font-family-sans-serif;
+  transition: variables.$transition-slow;
 
   &:hover {
-    color: $accent;
+    color: variables.$accent;
     background-color: inherit;
   }
 }
 
 .navbar {
   padding: 10px;
-  background-color: $background;
+  background-color: variables.$background;
 
   .navbar-menu {
     background-color: inherit;
   }
 }
 
-@media (max-width: $desktop) {
+@media (max-width: initial-variables.$desktop) {
   .navbar {
     .navbar-menu {
-      transition: all $fast;
+      transition: all variables.$fast;
       max-height: 0;
       display: block;
       box-shadow: none;

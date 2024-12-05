@@ -1,4 +1,4 @@
-@import '../variables';
+@use '../variables';
 
 .form-container {
   max-width: 500px;
@@ -6,7 +6,7 @@
 }
 
 .heading {
-  font-family: $font-family-sans-serif;
+  font-family: variables.$font-family-sans-serif;
   text-transform: lowercase;
   text-align: center;
   position: relative;
@@ -15,12 +15,12 @@
 
   .outer-span {
     padding: 0 10px;
-    background: $background;
+    background: variables.$background;
   }
 
   .line-break {
-    border-top: 1px solid $secondary;
-    background-color: $secondary;
+    border-top: 1px solid variables.$secondary;
+    background-color: variables.$secondary;
     position: absolute;
     top: 14px;
     left: 0;
@@ -33,7 +33,7 @@
 .form-control {
   background-color: inherit;
   border: none;
-  border-bottom: 1px solid $secondary-light;
+  border-bottom: 1px solid variables.$secondary-light;
   border-radius: 0;
   width: 100%;
   padding: 0.5rem 0.75rem;
@@ -45,7 +45,7 @@
   }
 
   &.invalid {
-    border-bottom: 1px solid $primary-error;
+    border-bottom: 1px solid variables.$primary-error;
   }
 }
 
@@ -55,23 +55,23 @@ textarea.form-control {
 }
 
 .submit {
-  border-top: 1px solid $primary;
+  border-top: 1px solid variables.$primary;
   position: relative;
   margin: 50px 0;
   padding-top: 40px;
 
   .submit-button {
-    font-family: $font-family-sans-serif;
+    font-family: variables.$font-family-sans-serif;
     font-size: 16px;
     z-index: 1;
     border-radius: 50%;
     height: 80px;
     width: 80px;
     padding: 0;
-    border: 15px solid $background;
-    background-color: $primary;
-    color: $background;
-    transition: $transition-fast;
+    border: 15px solid variables.$background;
+    background-color: variables.$primary;
+    color: variables.$background;
+    transition: variables.$transition-fast;
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -80,11 +80,11 @@ textarea.form-control {
     margin: -40px 0 0 -40px;
 
     &:hover {
-      background-color: $accent;
+      background-color: variables.$accent;
     }
 
     &:disabled {
-      background-color: $secondary;
+      background-color: variables.$secondary;
       opacity: 1;
       cursor: inherit;
     }
@@ -92,5 +92,5 @@ textarea.form-control {
 }
 
 .accent {
-  color: $accent;
+  color: variables.$accent;
 }

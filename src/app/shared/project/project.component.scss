@@ -1,19 +1,19 @@
-@import '../../variables';
+@use '../../variables';
 
 .project {
   .project-title {
     cursor: pointer;
-    transition: $transition-fast;
+    transition: variables.$transition-fast;
 
     &:hover {
-      color: $accent;
+      color: variables.$accent;
     }
   }
 
   .project-details {
-    transition: $transition-fast;
+    transition: variables.$transition-fast;
     max-height: 0;
-    color: $secondary;
+    color: variables.$secondary;
     overflow: hidden;
 
     &.selected {
@@ -42,12 +42,12 @@
 
       a {
         text-decoration: none;
-        color: $secondary;
-        transition: $transition-fast;
+        color: variables.$secondary;
+        transition: variables.$transition-fast;
         padding-right: 30px;
 
         &:hover {
-          color: $accent;
+          color: variables.$accent;
         }
       }
     }
