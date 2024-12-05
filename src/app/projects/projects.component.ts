@@ -10,6 +10,7 @@ interface IProjects {
   selector: 'app-projects',
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
+  standalone: false,
 })
 export class ProjectsComponent {
   projects: IProjects = {
