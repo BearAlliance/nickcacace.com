@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-contact-form',
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.scss'],
+  standalone: false,
 })
 export class ContactFormComponent {
   hasValidEmail = true;

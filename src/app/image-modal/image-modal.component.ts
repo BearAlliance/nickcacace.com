@@ -11,6 +11,7 @@ import {
   selector: 'app-image-modal',
   templateUrl: './image-modal.component.html',
   styleUrls: ['./image-modal.component.scss'],
+  standalone: false,
 })
 export class ImageModalComponent implements OnChanges {
   @Input() src: string;
