@@ -58,18 +58,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "nickcacace:build"
+            "buildTarget": "nickcacace:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "nickcacace:build:production"
+              "buildTarget": "nickcacace:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "nickcacace:build"
+            "buildTarget": "nickcacace:build"
           }
         },
         "test": {
