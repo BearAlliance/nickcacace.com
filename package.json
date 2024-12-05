@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "build": "ng build --configuration production",
-    "start:dev": "ng serve",
+    "start": "ng serve",
     "build:dev": "ng build",
     "ng": "ng",
     "test": "npm run prettier-check && npm run lint",
