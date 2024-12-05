@@ -1,21 +1,21 @@
-@import './variables';
+@use 'variables';
 
 html {
-  background-color: $background;
+  background-color: variables.$background;
 }
 
 body {
-  color: $primary;
-  font-family: $font-family-base;
+  color: variables.$primary;
+  font-family: variables.$font-family-base;
 }
 
 .title {
-  font-family: $font-family-monospace;
+  font-family: variables.$font-family-monospace;
   text-align: center;
-  border-bottom: 1px solid $secondary-light;
+  border-bottom: 1px solid variables.$secondary-light;
   padding: 15px;
-  font-weight: $font-weight-light;
-  color: $secondary;
+  font-weight: variables.$font-weight-light;
+  color: variables.$secondary;
 }
 
 h1,
@@ -23,6 +23,6 @@ h2,
 h3,
 h4,
 h5 {
-  color: $secondary;
-  font-family: $font-family-sans-serif;
+  color: variables.$secondary;
+  font-family: variables.$font-family-sans-serif;
 }
