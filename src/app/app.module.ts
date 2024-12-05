@@ -6,7 +6,10 @@ import { TopNavComponent } from './top-nav/top-nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import {
+  provideHttpClient,
+  withInterceptorsFromDi,
+} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
@@ -17,8 +20,8 @@ import { AppRoutingModule } from './app-routing.module';
     FooterComponent,
     PageNotFoundComponent,
   ],
-  imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
-  providers: [],
   bootstrap: [AppComponent],
+  imports: [BrowserModule, FormsModule, AppRoutingModule],
+  providers: [provideHttpClient(withInterceptorsFromDi())],
 })
 export class AppModule {}
