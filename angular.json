@@ -16,11 +16,12 @@
               "browser": ""
             },
             "index": "src/index.html",
+            "inlineStyleLanguage": "scss",
             "tsConfig": "src/tsconfig.app.json",
-            "polyfills": ["src/polyfills.ts"],
+            "polyfills": ["src/polyfills.ts", "zone.js"],
             "assets": ["src/assets", "src/favicon.ico", "src/404.html"],
             "styles": [
-              "src/styles.css",
+              "src/styles.scss",
               "node_modules/font-awesome/css/font-awesome.css",
               "node_modules/bulma/css/bulma.css"
             ],
@@ -39,14 +40,14 @@
               "budgets": [
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "6kb"
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
                 }
               ],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
               "namedChunks": false,
-              "extractLicenses": true,
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
