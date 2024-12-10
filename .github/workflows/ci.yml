@@ -27,6 +27,17 @@ jobs:
         with:
           path: ./dist
 
+  docker-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      - name: Docker Build
+        uses: docker/build-push-action@v6
+        with:
+          push: false
+          tags: website:latest
+
   deploy:
     needs: build
     if: ${{ github.ref_name == 'main' }}
