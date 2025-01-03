@@ -44,7 +44,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: ${{ github.ref_name == 'main' }}
-          tags: personal-website:latest
+          tags: ghcr.io/bearalliance/personal-website:latest
 
   deploy:
     needs: build
