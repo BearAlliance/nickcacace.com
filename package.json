@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "build": "ng build --configuration production",
-    "start": "ng serve",
+    "start": "http-server dist/",
+    "dev": "ng serve",
     "build:dev": "ng build",
     "ng": "ng",
     "test": "npm run prettier-check && npm run lint",
@@ -64,5 +65,8 @@
     "*.{js,jsx,json,css,md,mdx,ts,tsx}": [
       "prettier --write"
     ]
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
   }
 }
