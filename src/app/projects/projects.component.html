@@ -3,23 +3,25 @@
 <div class="columns">
   <div class="column software-col">
     <h2 class="heading is-size-3">Web</h2>
-    <app-project
-      *ngFor="let project of projects.software; let i = index"
-      [project]="project"
-      [selected]="isSelected('web', i)"
-      (selectClick)="setSelected('web', i)"
-    >
-    </app-project>
+    @for (project of projects.software; track project; let i = $index) {
+      <app-project
+        [project]="project"
+        [selected]="isSelected('web', i)"
+        (selectClick)="setSelected('web', i)"
+        >
+      </app-project>
+    }
   </div>
 
   <div class="column">
     <h2 class="heading is-size-3">Wood</h2>
-    <app-project
-      *ngFor="let project of projects.wood; let i = index"
-      [project]="project"
-      [selected]="isSelected('wood', i)"
-      (selectClick)="setSelected('wood', i)"
-    >
-    </app-project>
+    @for (project of projects.wood; track project; let i = $index) {
+      <app-project
+        [project]="project"
+        [selected]="isSelected('wood', i)"
+        (selectClick)="setSelected('wood', i)"
+        >
+      </app-project>
+    }
   </div>
 </div>

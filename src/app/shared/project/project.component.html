@@ -10,36 +10,44 @@
       <p>{{ project.description }}</p>
 
       <!-- Technologies -->
-      <div *ngIf="project.technologies" class="technologies">
-        <span class="technologies-heading"> Technologies: </span>
-        <ul>
-          <li *ngFor="let tech of project.technologies">- {{ tech }}</li>
-        </ul>
-      </div>
+      @if (project.technologies) {
+        <div class="technologies">
+          <span class="technologies-heading"> Technologies: </span>
+          <ul>
+            @for (tech of project.technologies; track tech) {
+              <li>- {{ tech }}</li>
+            }
+          </ul>
+        </div>
+      }
 
       <!-- Images -->
       <div class="project-images level is-mobile is-centered">
-        <div *ngFor="let image of project.images" class="level-item">
-          <figure class="image is-128x128" (click)="displayImageModal(image)">
-            <img src="{{ image.thumb }}" />
-          </figure>
-        </div>
+        @for (image of project.images; track image) {
+          <div class="level-item">
+            <figure class="image is-128x128" (click)="displayImageModal(image)">
+              <img src="{{ image.thumb }}" />
+            </figure>
+          </div>
+        }
 
         <app-image-modal
           [src]="displayedImageSrc"
           (closed)="clearDisplayedImage()"
-        >
+          >
         </app-image-modal>
       </div>
 
       <!-- External Links -->
       <div class="project-links">
-        <span *ngFor="let link of project.links; let i = index">
-          <a [href]="link.href" target="_blank">
-            {{ link.title }}
-            <span class="fa fa-external-link"></span>
-          </a>
-        </span>
+        @for (link of project.links; track link; let i = $index) {
+          <span>
+            <a [href]="link.href" target="_blank">
+              {{ link.title }}
+              <span class="fa fa-external-link"></span>
+            </a>
+          </span>
+        }
       </div>
     </div>
   </div>
