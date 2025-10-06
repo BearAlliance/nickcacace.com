@@ -12,7 +12,7 @@
       src="../../assets/headshot.jpg"
       alt="Profile Picture"
       class="img-fluid"
-      />
+    />
   </div>
 
   <div class="columns">
@@ -26,8 +26,7 @@
 
       <div class="column">
         @for (project of recentWork; track project) {
-          <app-project [project]="project">
-          </app-project>
+          <app-project [project]="project"> </app-project>
         }
 
         <a routerLink="/projects"> more... </a>
