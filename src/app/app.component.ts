@@ -1,4 +1,8 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  ViewEncapsulation,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { ShellComponent } from './shell/shell.component';
 
 @Component({
@@ -7,6 +11,7 @@ import { ShellComponent } from './shell/shell.component';
   encapsulation: ViewEncapsulation.None,
   styleUrls: ['./app.component.scss'],
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ShellComponent],
 })
 export class AppComponent {}

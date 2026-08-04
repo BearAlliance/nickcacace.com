@@ -1,19 +1,26 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { IImage, IProject } from '../projects.constant';
 
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',
   styleUrls: ['./project.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false,
 })
 export class ProjectComponent {
-  @Input() project: IProject;
-  @Input() selected: boolean;
+  @Input() project!: IProject;
+  @Input() selected: boolean = false;
   @Output() selectClick = new EventEmitter<void>();
   constructor() {}
 
-  displayedImageSrc: string;
+  displayedImageSrc: string | undefined;
 
   onClicked() {
     this.selected = !this.selected;

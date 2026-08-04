@@ -1,16 +1,14 @@
-const angularEslint = require('@angular-eslint/eslint-plugin');
-const angularTemplate = require('@angular-eslint/eslint-plugin-template');
-const angularTemplateParser = require('@angular-eslint/template-parser');
-const tsParser = require('@typescript-eslint/parser');
+const tseslint = require('typescript-eslint');
+const angular = require('angular-eslint');
 
-module.exports = [
+module.exports = tseslint.config(
   {
     ignores: ['projects/**/*'],
   },
   {
     files: ['**/*.ts'],
+    extends: [...angular.configs.tsRecommended],
     languageOptions: {
-      parser: tsParser,
       parserOptions: {
         createDefaultProgram: true,
         ecmaVersion: 2020,
@@ -18,14 +16,10 @@ module.exports = [
         sourceType: 'module',
       },
     },
-    plugins: {
-      '@angular-eslint': angularEslint,
-      '@angular-eslint/template': angularTemplate,
-    },
-    processor: angularTemplate.processors['extract-inline-html'],
+    processor: angular.processInlineTemplates,
     rules: {
-      ...angularEslint.configs.recommended.rules,
       '@angular-eslint/prefer-standalone': 'off',
+      '@angular-eslint/prefer-on-push-component-change-detection': 'off',
       '@angular-eslint/component-selector': [
         'error',
         {
@@ -46,14 +40,7 @@ module.exports = [
   },
   {
     files: ['**/*.html'],
-    languageOptions: {
-      parser: angularTemplateParser,
-    },
-    plugins: {
-      '@angular-eslint/template': angularTemplate,
-    },
-    rules: {
-      ...angularTemplate.configs.recommended.rules,
-    },
+    extends: [...angular.configs.templateRecommended],
+    rules: {},
   },
-];
+);
