@@ -12,7 +12,6 @@ Application code lives under `src/`. Feature areas are grouped in `src/app/` (`h
 - `npm run build`: create the production bundle.
 - `npm start`: serve the built `dist/` output with `http-server`.
 - `npm run lint`: run Angular ESLint checks.
-- `ng test`: run Jasmine/Karma unit tests.
 - `npm test`: run the repo’s gate checks (`prettier --check` and `ng lint`).
 
 ## Coding Style & Naming Conventions
