@@ -80,15 +80,18 @@
           "options": {
             "main": "src/test.ts",
             "karmaConfig": "./karma.conf.js",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": ["src/polyfills.ts"],
             "tsConfig": "src/tsconfig.spec.json",
             "scripts": [],
             "styles": [
-              "src/styles.css",
+              "src/styles.scss",
               "node_modules/font-awesome/css/font-awesome.css",
               "node_modules/bulma/css/bulma.css"
             ],
-            "assets": ["src/assets", "src/favicon.ico"]
+            "assets": ["src/assets", "src/favicon.ico"],
+            "stylePreprocessorOptions": {
+              "includePaths": ["."]
+            }
           }
         },
         "lint": {
